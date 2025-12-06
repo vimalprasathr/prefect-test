@@ -1,0 +1,14 @@
+version: "3.0"
+name: "hello-world-project"
+
+deployments:
+  - name: "my-first-deployment"
+    entrypoint: "hello_world.py:hello_world"
+    work_pool:
+      name: "local-pool"
+    parameters:
+      goodbye: true
+    tags:
+      - onboarding
+    schedules:
+      - interval: 60  # seconds
