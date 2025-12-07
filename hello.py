@@ -7,13 +7,3 @@ def hello_world(name: str = "world", goodbye: bool = False):
 
     if goodbye:
         print(f"Goodbye {name}!")
-
-
-if __name__ == "__main__":
-    # creates a deployment and starts a long-running
-    # process that listens for scheduled work
-    hello_world.serve(name="my-first-deployment",
-        tags=["onboarding"],
-        parameters={"goodbye": True},
-        interval=60
-    )
