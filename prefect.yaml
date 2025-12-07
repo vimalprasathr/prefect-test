@@ -16,13 +16,14 @@ deployments:
   # Deployment 2: Hello World
   # ---------------------------
   - name: my-first-deployment
-    entrypoint: hello_world.py:hello_world
+    entrypoint: hello.py:hello_world
     work_pool:
       name: local-pool
     parameters:
       goodbye: true
     tags:
       - onboarding
+      - vtest
     schedule:
       interval: 60   # every 60 seconds
 
