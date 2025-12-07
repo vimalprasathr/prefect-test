@@ -10,19 +10,14 @@ pull:
 
 deployments:
 
-
-  # ---------------------------
-  # Deployment 2: Hello World
-  # ---------------------------
-  - name: my-first-deployment-1
-    entrypoint: "hello.py:hello_world"
+  - name: hello-deployment
+    entrypoint: "hello.py:hello"
     work_pool:
       name: local-pool
     parameters:
-      goodbye: true
+      name: "Vimal"
     tags:
-      - onboarding
-      - vtest
+      - test
+      - simple
     schedule:
-      interval: 300   # every 60 seconds
-
+      interval: 300   # run every 5 minutes
