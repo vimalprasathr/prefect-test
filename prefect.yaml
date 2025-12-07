@@ -15,7 +15,7 @@ deployments:
   # ---------------------------
   # Deployment 2: Hello World
   # ---------------------------
-  - name: my-first-deployment
+  - name: my-first-deployment-1
     entrypoint: hello.py:hello_world
     work_pool:
       name: local-pool
