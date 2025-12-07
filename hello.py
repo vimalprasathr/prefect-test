@@ -2,7 +2,7 @@ from prefect import flow
 
 
 @flow(log_prints=True)
-def hello_world(name: str = "world", goodbye: bool = False):
+def hello_world(name: str = "world", goodbye1: bool = False):
     print(f"Hello {name} from Prefect! 🤗")
 
     if goodbye:
