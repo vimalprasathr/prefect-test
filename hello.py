@@ -1,9 +1,7 @@
 from prefect import flow
 
+@flow
+def hello(name="World"):
+    print(f"Hello {name}!")
 
-@flow(log_prints=True)
-def hello_world(name: str = "world", goodbye1: bool = False):
-    print(f"Hello {name} from Prefect! 🤗")
-
-    if goodbye:
-        print(f"Goodbye {name}!")
+hello("Vimal")
