@@ -1,14 +1,27 @@
 version: "3.0"
-name: "hello-world-project"
+
+name: prefect-flows-project
+
+pull:
+  - prefect.deployments.steps.git_clone:
+      repository: "https://github.com/vimalprasathr/prefect-test.git"
+      branch: "main"
+      credentials: "{{ prefect.blocks.github-credentials.git-hub-hello }}"
 
 deployments:
-  - name: "my-first-deployment"
-    entrypoint: "hello_world.py:hello_world"
+
+
+  # ---------------------------
+  # Deployment 2: Hello World
+  # ---------------------------
+  - name: my-first-deployment
+    entrypoint: hello_world.py:hello_world
     work_pool:
-      name: "local-pool"
+      name: local-pool
     parameters:
       goodbye: true
     tags:
       - onboarding
-    schedules:
-      - interval: 60  # seconds
+    schedule:
+      interval: 60   # every 60 seconds
+
