@@ -7,7 +7,6 @@ pull:
       repository: "https://github.com/vimalprasathr/prefect-test.git"
       branch: "main"
       credentials: "{{ prefect.blocks.github-credentials.git-hub-hello }}"
-      directory: "."
 
 deployments:
 
@@ -16,7 +15,7 @@ deployments:
   # Deployment 2: Hello World
   # ---------------------------
   - name: my-first-deployment-1
-    entrypoint: "prefect-test/hello.py:hello_world"
+    entrypoint: "hello.py:hello_world"
     work_pool:
       name: local-pool
     parameters:
