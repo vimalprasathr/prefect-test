@@ -7,6 +7,7 @@ pull:
       repository: "https://github.com/vimalprasathr/prefect-test.git"
       branch: "main"
       credentials: "{{ prefect.blocks.github-credentials.git-hub-hello }}"
+      directory: "/opt/prefect"
 
 deployments:
 
