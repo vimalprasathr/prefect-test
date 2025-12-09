@@ -24,4 +24,4 @@ jobs:
         run: prefect config set PREFECT_API_URL="${{ secrets.PREFECT_API_URL }}"
 
       - name: Deploy to Prefect Server
-        run: prefect deployment ls
+        run: prefect deploy
