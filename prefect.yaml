@@ -15,7 +15,7 @@ deployments:
     work_pool:
       name: local-pool
     parameters:
-      name: "Vimal Prasath"
+      name: "Vimal Prasath Terina"
     tags:
       - test
       - simple
